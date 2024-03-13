@@ -39,7 +39,9 @@ function initBuffers(gl) {
       // Left face
       -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, -1.0,
     ];
-  
+    for (let i = 0; i < positions.length; i++) {
+      positions[i] = positions[i]/2
+    }
     // Now pass the list of positions into WebGL to build the
     // shape. We do this by creating a Float32Array from the
     // JavaScript array, then use it to fill the current buffer.
